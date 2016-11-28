@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Department of Emerging Superhero Knowledge</title>
+        <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <script src="./scripts/vendor/angular.min.js"></script>
+        <script src="./scripts/vendor/angular-route.min.js"></script>
+        <script src="./scripts/client.js"></script>
+        <script type="text/javascript" src="scripts/controllers/powers.controller.js"></script>
+        <script type="text/javascript" src="scripts/controllers/registry.controller.js"></script>
+    </head>
+
+    <body ng-app="registryApp">
+        <header ng-include="'/views/templates/header.html'" class="jumbotron text-center"></header>
+        <div ng-include="'/views/templates/nav.html'"></div>
+        <main ng-view></main>
+        <div ng-include="'/views/templates/footer.html'"></div>
+    </body>
+
+</html>

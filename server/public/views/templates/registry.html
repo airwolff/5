@@ -1,0 +1,24 @@
+<div class="form-group">
+    <form class="navbar-form" id="heroInfo">
+        <label class="sr-only" for="persona">Persona:</label>
+        <input type="text" id="persona" ng-model="registry.newRegistry.persona" name="persona" class="form-control" placeholder="Persona" required/>
+        <label class="sr-only" for="alias">Alias:</label>
+        <input type="text" id="alias" ng-model="registry.newRegistry.alias" name="alias" class="form-control" placeholder="Alias" required/>
+        <label class="sr-only" for="power_id">Power:</label>
+        <div ng-repeat="power in registry.identities">
+            <select ng-options=""></select>
+        </div>
+        <button class="btn btn-default" ng-click="registry.addRegistry()">Submit</button>
+    </form>
+</div>
+<div class="heroEdit form-group" ng-repeat="hero in registry.identities">
+    <form class="navbar-form">
+        <input type="text" ng-model="hero.persona" class="form-control" />
+        <input type="text" ng-model="hero.alias" class="form-control" />
+        <input type="number" ng-model="hero.power_id" class="form-control" />
+        <input type="text" ng-model="hero.name" class="form-control" />
+        <input type="text" ng-model="hero.description" class="form-control" />
+        <button ng-click="input.editHero(hero)" class="btn btn-default">Edit</button>
+        <button ng-click="input.deleteHero(hero)" class="btn btn-default">Delete</button>
+    </form>
+</div>
